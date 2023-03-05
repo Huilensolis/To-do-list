@@ -81,7 +81,7 @@ body{
     overflow-y: auto;
     overflow-x: hidden;
     height: 100%;
-    margin-top: 40px;
+    margin-top: 35px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -132,24 +132,22 @@ ul{
 
 /* alert  */
 .alert{
-    display: inline-block;
-    position: absolute;
+    display: none;
     color: var(--magenta);
     font-size: 1.5rem;
-    top: 158px;
 }
 .alert span{
     font-weight: 600;
     color: var(--pink);
     text-decoration: underline 1px;
 }
+.active{
+    display: inline;
+}
 .highlight{
     outline: var(--pink) solid 2px;
 }
 @media (max-width: 600px){
-    body{
-        
-    }
     .header{
         width: 100vw;
         height: 95vh;

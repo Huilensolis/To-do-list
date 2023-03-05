@@ -13,24 +13,21 @@ addTaskBtn.addEventListener('click', (e) => {
         var alertExist = document.querySelector('.alert');
         if(alertExist){
             addTaskInput.classList.add('highlight');
-            alertExist.remove();
+            alertExist.classList.remove('active');
             setTimeout(() => {
-                const alert = document.createElement('p');
-                alert.innerHTML = 'Please full the <span> Text Area</span> to create a task';
-                alert.classList.add('alert');
-                inputsContainer.appendChild(alert);
+                const alert = document.querySelector('.alert');
+                alert.innerHTML = 'Please full the <span> Text Area </span> to create a task';
+                alert.classList.add('active')
             }, 50);
         }else{
-            addTaskInput.classList.add('highlight');
-            const alert = document.createElement('p');
-            alert.innerHTML = 'Please full the <span> Text Area</span> to create a task';
-            alert.classList.add('alert');
-            inputsContainer.appendChild(alert);
+            const alert = document.querySelector('.alert');
+            alert.innerHTML = 'Please full the <span> Text Area </span> to create a task';
+            alert.classList.add('active');
         }
     } else{
         var alertExist = document.querySelector('.alert');
         if(alertExist){
-            alertExist.remove();
+            alertExist.classList.remove('active');
             createTask()
         } else{
             createTask()
