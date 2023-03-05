@@ -1,0 +1,129 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --black:#23262E;
+    --gray: #202020;
+    --green: #96E072;
+    --yellow: #FFE66D;
+    --blue: #7CB7FF;
+    --pink: #FF00AA;
+    --magenta: #00E8C6;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Hind Siliguri', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    padding: 5vh 5vw;
+    background-color: var(--black);
+    height: 100%;
+    width: 100vw;
+}
+.header{
+    background-color: var(--black);
+    border-radius: 24px;
+    border: var(--green) 2px solid;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 600px;
+    height: 90vh;
+    padding: 50px;
+}
+.header h1{
+    color: var(--green);
+    font-size: 3rem;
+}
+.inputs{
+    height: 30px;
+    width: 100%;
+    display: flex;
+}
+.inputs::before{
+    content: '';
+    background-color: var(--green);
+    position: absolute;
+    width: calc(600px - (52px + 52px));
+    height: 1px;
+    top: calc(5vh + 145px);
+}
+#task_input{
+    padding: 5px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    height: 100%;
+    width: 80%;
+}
+#task_input:focus-visible{
+   outline: 2px solid var(--pink);
+}
+#task_input:focus-visible + #add_task_btn{
+    outline: 2px solid var(--pink);
+}
+#add_task_btn{
+    background-color: var(--green);
+    color: var(--black);
+    font-size: 2rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 0px 5px 5px 0;
+    height: 100%;
+    width: 20%;
+}
+
+/* task items */
+.content{
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+}
+.task_item{
+    height: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.text_container{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 5px;
+    background-color: var(--yellow);
+    width: 80%;
+    border-radius: 5px 0 0 5px;
+}
+.text_container p{
+    color: var(--black);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.delete_btn{
+    width: 20%;
+    height: 100%;
+    background-color: var(--pink);
+    border-radius: 0px 5px 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+.delete_btn p{
+    font-size: 2rem;
+    font-weight: 600;
+}
