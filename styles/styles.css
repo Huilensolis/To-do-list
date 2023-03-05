@@ -93,13 +93,14 @@ ul{
     list-style: none;
 }
 .task_item{
-    height: 30px;
+    height: 50px;
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 .text_container{
+    overflow: auto;
     display: flex;
     align-items: center;
     height: 100%;
@@ -109,6 +110,7 @@ ul{
     border-radius: 5px 0 0 5px;
 }
 .text_container p{
+    line-height: 15px;
     color: var(--black);
     font-size: 1.5rem;
     font-weight: 500;
@@ -126,4 +128,43 @@ ul{
 .delete_btn p{
     font-size: 2rem;
     font-weight: 600;
+}
+
+/* alert  */
+.alert{
+    display: inline-block;
+    position: absolute;
+    color: var(--magenta);
+    font-size: 1.5rem;
+    top: 158px;
+}
+.alert span{
+    font-weight: 600;
+    color: var(--pink);
+    text-decoration: underline 1px;
+}
+.highlight{
+    outline: var(--pink) solid 2px;
+}
+@media (max-width: 600px){
+    body{
+        
+    }
+    .header{
+        width: 100vw;
+        height: 95vh;
+    }
+    .inputs::before{
+        height: 2px;
+        top: calc(5vh + 160px);
+        width: calc(100vw - (52px + 52px));
+    }
+    .alert{
+        width: calc(90vw - 100px);
+        line-height: 15px;
+        top: 163px;
+    }
+    .content{
+        margin-top: 65px;
+    }
 }
